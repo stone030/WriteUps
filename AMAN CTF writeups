@@ -1,1 +1,25 @@
 # Cryptography:
+
+$ Incomplete Password 100 points:
+
+They captured the following sha1 hash, which was used by the hacker:
+
+827d1057ad7258b180efca5e9cc25795a1a5f622
+
+They looked further into the network logs and only found the first few plain characters of the password the hacker used:
+
+Om@nYg
+
+Use your programming skills to brute-force the remaining part of the password, knowing that the system the hacker was able to compromise has the following password requirements:
+
+Password must not exceed 9 characters
+Must contain lower & capital case characters
+Alphanumeric characters are allowed
+Only * & @ % ^ + _ special characters are allowed
+The password is the flag.
+
+Here we can build a program from scratch that calculates the sha1 hash of Om@nYg and compare it to the given hash, if true then SuGoi!! if not then 
+add characters that follow the password policy given in the task.
+In my case I'm a bit lazy to complete such a code but you can have a glimps to Madiox writeup code which is well ordered and neat..
+However, stone solved it in 2 ways:
+% using John:
