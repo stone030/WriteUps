@@ -39,7 +39,7 @@ By following the same approach, but just a little difference regarding the tool 
 
 ![Screenshot 2021-08-18 222955](https://user-images.githubusercontent.com/59108199/132400879-e43614dd-4680-48df-8d06-92cccb004182.png)
 
-I'm not giving you the result in a golden plate, but in a wooden one >:)
+Stone Aint giving you the result in a golden plate, but in a wooden one >:)
 
 and as you've noticed, we didn't need the hash which they gave us in the task because it was easy since the brute forcing was short with maximum of 3 inputs! otherwise we would probably need to do the code to solve this task. and it's an easy one in python, but stone was lazy to do it. [CHECK OUT MADIOX]
 
@@ -64,5 +64,36 @@ we found out there is only 1 file called flag.txt so to extract it you gotta stu
 Now we move on.. John has active passw cracking tools to brute force archives such as .zip and .rar folders, so we gonna use zip2john tool to get the pw of the given zip folder:
 
 ![Screenshot 2021-09-07 002712](https://user-images.githubusercontent.com/59108199/132403849-600c39b7-4a90-461f-a249-b6916f138b59.png)
+
 And I saved the hashes in a .hash file called zip.hash, noice so far? :) cool
 
+and you probably know why we need to store the hashes in zip.hash that I made... because they are still (hashes) and we need to crack them, so we gonna use John *himself* ths time to do da cracking, and you know da way >:)
+
+well, this time i will give it away:
+
+![Screenshot 2021-09-07 002617](https://user-images.githubusercontent.com/59108199/132404493-db2bb54d-6ab2-4798-bff2-b170d4287884.png)
+
+We can see the passw of the .zip folder in the middle of the output, and if buy mistake you closed the terminal, no worries coz this John stores his cracked corpse in a safe place, just use his patterns such as --show  to reveal them again without cracking again.
+
+now we got the flag.txt file, and it has the following:
+
+![Screenshot 2021-09-07 002313](https://user-images.githubusercontent.com/59108199/132405137-5b23f79f-9bb2-4baa-aef3-79f50f204a35.png)
+
+as seeen, the 9th line of the file has a looooong string, and it asks you to pull out the "special characters" since they form up the final flag! 
+
+we need a little program to do the job faster. After using my little python program, I found out that there is no speacial characters or numbers, so after looking thoroughly (and stone actually checked it manually), I saw that most chars are small-case, so i modified my little program to get out only upper-case chars, and SuGoi! xD
+
+The python code looks like:
+```
+import os
+
+entries = os.listdir('/home/stone/Downloads/AMANctf/scattered/')
+
+with open('/home/stone/Downloads/AMANctf/forgotThePW/flag.txt', 'r') as f:
+    lines = f.readlines()
+f.close()
+
+new_string = ''.join([c for c in str(lines[9]) if c.isupper()]) #in this case if the the char isn't small then it is special because most characters are small.
+
+print(new_string)
+```
