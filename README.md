@@ -41,6 +41,9 @@ By following the same approach, but just a little difference regarding the tool 
 
 Stone Aint giving you the result in a golden plate, but in a wooden one >:)
 
+![200w (1)](https://user-images.githubusercontent.com/59108199/132441686-6f15287a-6213-407e-8151-6908089801ce.gif)
+
+
 and as you've noticed, we didn't need the hash which they gave us in the task because it was easy since the brute forcing was short with maximum of 3 inputs! otherwise we would probably need to do the code to solve this task. and it's an easy one in python, but stone was lazy to do it. [CHECK OUT MADIOX]
 
 # Forgot the password 80 points:
@@ -69,7 +72,9 @@ And I saved the hashes in a .hash file called zip.hash, noice so far? :) cool
 
 and you probably know why we need to store the hashes in zip.hash that I made... because they are still (hashes) and we need to crack them, so we gonna use John *himself* ths time to do da cracking, and you know da way >:)
 
-well, this time i will give it away:
+well, this time i will give it away to show off some generosity:
+
+![hqdefault (1)](https://user-images.githubusercontent.com/59108199/132442114-b4ad14fc-4203-46b7-bfe1-6f4381205503.jpg)
 
 ![Screenshot 2021-09-07 002617](https://user-images.githubusercontent.com/59108199/132404493-db2bb54d-6ab2-4798-bff2-b170d4287884.png)
 
@@ -97,3 +102,37 @@ new_string = ''.join([c for c in str(lines[9]) if c.isupper()]) #in this case if
 
 print(new_string)
 ```
+
+# Multi-shots 60 points:
+
+To improve security, a script kiddy claimed that he made his password very hard to recognize.  Can you help us reveal the password from the attached file?
+
+well, here they gave us a file called ciphered.___ , basically after using the command *file ciphered.___* it's just a ASCII text file, but its contents is...
+
+![Screenshot 2021-09-07 125423](https://user-images.githubusercontent.com/59108199/132438365-2798858a-e719-4ce0-8e99-2bc8a3604a2b.png)
+
+that is how a binary text looks like!
+
+there are many ways to do it, some veteran people use bash script tools like _perl_ or _xxd_ or their own codes, but stone used something veryyyy lazy easy, which is the internet.. <:)
+
+You can find many websites to do a lot of things for you especially when you try to solve CTFs, but as we ALWAYS say, it is a **great** practice to not rely on these easy ways (and the talk is meant to me as well 🗿💧 ) 
+
+![hqdefault](https://user-images.githubusercontent.com/59108199/132442478-f5c09a92-15bc-4a1f-8cc4-d8e1daa1fceb.jpg)
+
+Anyway, i've used the following website since you can configer your preferred inputs & outputs as you wish: https://cryptii.com/pipes/binary-decoder
+
+![Screenshot 2021-09-07 125523](https://user-images.githubusercontent.com/59108199/132439829-d7ed4fd6-f2d9-4025-9aab-58e3a4e359fa.png)
+
+as we see in the right side of this online tool (the plain text side), the binary was decoded to give us another unreadable text, this text seems to be encoded with base64 (_you will get used to the different types of encryptions with time as you go by solving many CTFs, but if you want an easy tip, just copy and paste the encoded text on google and it mostly gives you a hint in the google results on the encoding method used for your text_). Moving on, I decrypt the base64 text using another online tool just to make sure: https://www.base64decode.org/
+
+![Screenshot 2021-09-07 125621](https://user-images.githubusercontent.com/59108199/132440494-63eb601d-c41a-45d9-b834-6c285fe402d3.png)
+
+as seen in the output down in the pic, this time we have a long sequence of digits and some letters they look like sha1 or some similar thing but not really. playing and trying around on them using the 1st online tool that I used, it turned out it's in hexadecimal, so: 
+
+![Screenshot 2021-09-07 125743](https://user-images.githubusercontent.com/59108199/132441061-a58177af-fe59-4083-ae65-1cb9066ce3ac.png)
+
+and the plain text of it is a set of chars with numbers, this reminds me of the ASCII table, you can check the ascii table down from https://www.dcode.fr/ascii-code and replace the number above to result in the plain final flag:
+
+![Screenshot 2021-09-07 125804](https://user-images.githubusercontent.com/59108199/132441657-44c10f02-9796-4405-a6b4-fd4946740b0a.png)
+
+![download1](https://user-images.githubusercontent.com/59108199/132441992-20e379aa-f75a-4458-9601-0bdc582d1515.jpg)
