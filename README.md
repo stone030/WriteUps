@@ -15,6 +15,8 @@ Here are writeups for some tasks from Oman AMAN ctf
 
 4. [Go to Sound code 40 points](#sound-code-40-points)
 
+5. [Go to Special summation 35 points](#special-summation-35-points)
+
 # Cryptography:
 
 # Incomplete Password 100 points:
@@ -165,5 +167,42 @@ After uploading the .wav file, waited a little until the tool listens to the who
 
 ![Screenshot 2021-09-07 130955](https://user-images.githubusercontent.com/59108199/132521824-12a8dd18-5af3-4378-bfde-84c1e59d89c9.png)
 
+# Special summation 35 points:
+Using any programming language, create a function to calculate the total sum of all "odd" integers between any two given numbers, under the condition that any sum total ends with 0 will NOT be counted.
 
+For example: the sum of all odd integers between 6 and 18 will be:
+
+7+9=16
+
+16+11=27
+
+27+13=40 (skipped because the total 40 ends with 0 )
+
+27+15=42
+
+42+17=59
+
+Total is 59
+
+Your flag is the total sum of all "odd" integers between 10 and 1000
+
+All I can do here honestly is giving you the code to learn from it:
+
+```
+sum = 0 # storing our special sumation here
+while(True):
+    lower = int(input("enter the lowest number: \n"))   # taking a lower input from the user 
+    higher = int(input("enter the hieghest number: \n")) ## taking a higher input from the user
+    lower1 = lower # storing the value of the lower value
+
+    for lower in range(lower,higher+1):
+        if(lower % 2 != 0):             #to sum only odd nums
+            if( (sum+lower)%10 != 0):   #to ignore numbers ending with 0
+                sum += lower
+        
+    print("the sum of the odd numbers between "+str(lower1)+" and "+str(higher)+" is: \n"+str(sum)+"\n\n==============")
+    
+    sum = 0 # resetting the process for any repeating needed
+    
+```
 
