@@ -157,8 +157,6 @@ You were able to intercept a secret message over a telecommunication channel bet
 
 Here they gave us a .wav file (voice media file). After playing it, it has no words! just "toot toooot" like ON-OFF signal tones, so it's clear that it is a morse code.
 
-![53hqmz](https://user-images.githubusercontent.com/59108199/132520312-023817cf-a519-469a-b63b-7ca85a6b97f6.jpg)
-
 I googled for an online tool to do the job, just to shorten the time, take this link https://morsecode.world/international/decoder/audio-decoder-adaptive.html:
 
 ![Screenshot 2021-09-07 130846](https://user-images.githubusercontent.com/59108199/132521915-331efbfb-ae1c-41f3-95e5-79b67fd337c4.png)
