@@ -3,6 +3,11 @@ for any comment you can either send it here or to Stone's social accounts direct
 
 Here are writeups for some tasks from Oman AMAN ctf
 
+[Go to Incomplete Password 100 points](#incomplete-password-100-points)
+
+[Go to Forgot the password 80 points](#forgot-the-password-80-points)
+
+
 # Cryptography:
 
 # Incomplete Password 100 points:
@@ -106,7 +111,7 @@ new_string = ''.join([c for c in str(lines[9]) if c.isupper()]) #in this case if
 print(new_string)
 ```
 
-# Multi-shots 60 points:
+#Multi-shots 60 points:
 
 To improve security, a script kiddy claimed that he made his password very hard to recognize.  Can you help us reveal the password from the attached file?
 
