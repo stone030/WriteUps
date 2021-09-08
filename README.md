@@ -1,4 +1,5 @@
 # some of AMAN CTF writeups
+This is my 1st time doing a writeup, so for any adjustment plz let me know :)
 The writeups here are presented for education purpose only :)
 for any comment you can either send it here or to Stone's social accounts directly, though i sometimes take days to reply since i don't open all my social media a lot :)
 
