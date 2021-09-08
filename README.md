@@ -13,7 +13,7 @@ Here are writeups for some tasks from Oman AMAN ctf
 
 3. [Go to Multi-shots 60 points](#multi-shots-60-points)
 
-
+4. [Go to Sound code 40 points](#sound-code-40-points)
 
 # Cryptography:
 
@@ -151,3 +151,21 @@ and the plain text of it is a set of chars with numbers, this reminds me of the 
 ![Screenshot 2021-09-07 125804](https://user-images.githubusercontent.com/59108199/132441657-44c10f02-9796-4405-a6b4-fd4946740b0a.png)
 
 ![download1](https://user-images.githubusercontent.com/59108199/132441992-20e379aa-f75a-4458-9601-0bdc582d1515.jpg)
+
+# Sound code 40 points:
+You were able to intercept a secret message over a telecommunication channel between 2 hackers.  We need to decode this message.  Can you help us?
+
+Here they gave us a .wav file (voice media file). After playing it, it has no words! just "toot toooot" like ON-OFF signal tones, so it's clear that it is a morse code.
+
+![53hqmz](https://user-images.githubusercontent.com/59108199/132520312-023817cf-a519-469a-b63b-7ca85a6b97f6.jpg)
+
+I googled for an online tool to do the job, just to shorten the time, take this link https://morsecode.world/international/decoder/audio-decoder-adaptive.html:
+
+![Screenshot 2021-09-07 130846](https://user-images.githubusercontent.com/59108199/132521915-331efbfb-ae1c-41f3-95e5-79b67fd337c4.png)
+
+After uploading the .wav file, waited a little until the tool listens to the whole voice, and it gave me a row text (most likely, Hexadecimal) so i decoded it using the usual online tool https://cryptii.com/pipes/binary-decoder:
+
+![Screenshot 2021-09-07 130955](https://user-images.githubusercontent.com/59108199/132521824-12a8dd18-5af3-4378-bfde-84c1e59d89c9.png)
+
+
+
