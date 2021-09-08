@@ -1,10 +1,11 @@
+# some of AMAN CTF writeups
 The writeups here are presented for education purpose only :)
 for any comment you can either send it here or to Stone's social accounts directly, though i sometimes take days to reply since i don't open all my social media a lot :)
 
 Here are writeups for some tasks from Oman AMAN ctf
 
 # Tasks:
-
+* **[Cryptography](#cryptography)**
 1. [Go to Incomplete Password 100 points](#incomplete-password-100-points)
 
 2. [Go to Forgot the password 80 points](#forgot-the-password-80-points)
