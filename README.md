@@ -205,4 +205,4 @@ while(True):
     sum = 0 # resetting the process for any repeating needed
     
 ```
-
+There could be other ways to write even a smaller code, but i did it this way.
