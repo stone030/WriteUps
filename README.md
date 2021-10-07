@@ -63,7 +63,7 @@ Stone Aint giving you the result in a golden plate, but in a wooden one >:)
 
 and as you've noticed, we didn't need the hash which they gave us in the task because it was easy since the brute forcing was short with maximum of 3 inputs! otherwise we would probably need to do the code to solve this task. and it's an easy one in python, but stone was lazy to do it. 
 
-so here is the code that MADIOX has written, you can save it to a python file and run simply it:
+so here is the code that MADIOX has written, you can save it to a python file and run it:
 
 ```
 import string #library that contains ascii chars
