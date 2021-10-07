@@ -61,7 +61,8 @@ Stone Aint giving you the result in a golden plate, but in a wooden one >:)
 ![200w (1)](https://user-images.githubusercontent.com/59108199/132441686-6f15287a-6213-407e-8151-6908089801ce.gif)
 
 
-and as you've noticed, we didn't need the hash which they gave us in the task because it was easy since the brute forcing was short with maximum of 3 inputs! otherwise we would probably need to do the code to solve this task. and it's an easy one in python, but stone was lazy to do it. so here is the code that MADIOX has written:
+and as you've noticed, we didn't need the hash which they gave us in the task because it was easy since the brute forcing was short with maximum of 3 inputs! otherwise we would probably need to do the code to solve this task. and it's an easy one in python, but stone was lazy to do it. so here is the code that MADIOX has written, you can save it to a python file and run simply it:
+
 ```
 import string #library that contains ascii chars
 import hashlib # Library that contains the SHA1 algorithm that we need
