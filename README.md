@@ -61,7 +61,42 @@ Stone Aint giving you the result in a golden plate, but in a wooden one >:)
 ![200w (1)](https://user-images.githubusercontent.com/59108199/132441686-6f15287a-6213-407e-8151-6908089801ce.gif)
 
 
-and as you've noticed, we didn't need the hash which they gave us in the task because it was easy since the brute forcing was short with maximum of 3 inputs! otherwise we would probably need to do the code to solve this task. and it's an easy one in python, but stone was lazy to do it. [CHECK OUT MADIOX]
+and as you've noticed, we didn't need the hash which they gave us in the task because it was easy since the brute forcing was short with maximum of 3 inputs! otherwise we would probably need to do the code to solve this task. and it's an easy one in python, but stone was lazy to do it. so here is the code that MADIOX has written:
+```
+import string #library that contains ascii chars
+import hashlib # Library that contains the SHA1 algorithm that we need
+
+allowed_chars = string.ascii_lowercase + string.ascii_uppercase + string.digits + r'*&@%^+_' # We build the set of all the allowed characters
+
+# Building allowed charset ^^
+
+init_string = r"Om@nYg" # This is the provided password, the r'' means we want a raw input "as-is", it saves us from escaping special characters
+target_output= r'827d1057ad7258b180efca5e9cc25795a1a5f622' # This is the target output, the r'' means we want a raw input "as-is", it saves us from escaping special characters
+
+def compare_output(test_string): #We will use a function to evaluate the SHA1 of our string with the target output, the function saves us some code duplication
+    m = hashlib.sha1() # importing sha1 from hashlib
+    m.update(test_string.encode("utf-8")) # We loaded our testing string and encode it with UTF-8 to perform the hashing operation
+    test_output = m.hexdigest() # We calculate the SHA1 hash and save the output in the test_output variable
+    
+    if test_output == target_output: # We compare our test output with the target output
+        print("The hash goes YOINK!:\"{}\"".format(test_string)) # In   case theres a match - we print this with the value of the secret string.
+        return True
+    return False
+# First loop for trying all the possible functions for a string with 7 characters (we add one character to the initial string)
+
+for char1 in allowed_chars:
+    test_string =init_string +char1 # We build our test string with one extra character (7 characters overall)
+    
+    if compare_output(test_string):
+        continue
+for char1 in allowed_chars:
+    for char2 in allowed_chars:
+        test_string =init_string +char1 +char2 # We build our test string with two extra characters (8 characters overall)
+        
+        if compare_output(test_string): # We send the test string for SHA1 calculation and comparison with the target
+            continue
+            
+```
 
 # Forgot the password 80 points:
 I have a ZIP file.  Can you brute-force the password to decompress it?
