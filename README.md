@@ -133,7 +133,7 @@ well, this time i will give it away to show off some generosity:
 
 ![Screenshot 2021-09-07 002617](https://user-images.githubusercontent.com/59108199/132404493-db2bb54d-6ab2-4798-bff2-b170d4287884.png)
 
-We can see the passw of the .zip folder in the middle of the output, and if buy mistake you closed the terminal, no worries coz this John stores his cracked corpse in a safe place, just use his patterns such as --show  to reveal them again without cracking again.
+We can see the passw of the .zip folder in the middle of the output, and if buy mistake you closed the terminal, no worries coz this John stores his cracked stuff  in a safe place, just use his patterns such as --show  to reveal them again without cracking again.
 
 now we got the flag.txt file, and it has the following:
 
